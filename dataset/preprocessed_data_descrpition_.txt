@@ -1,0 +1,13 @@
+After preprocessing, the Online Shoppers Purchasing Intention dataset contains 12,205 records, with 125 duplicate records removed from the original 12,330 samples. The dataset consists of 17 input features and one binary target variable (Revenue). No missing or invalid values were detected during data validation.
+
+To accommodate different machine learning algorithms, three preprocessing pipelines were designed:
+
+Full Binary Data: Numerical features are discretized into bins and converted into binary features using One-Hot Encoding. Categorical features are also one-hot encoded. This representation is primarily designed for Bernoulli Naive Bayes.
+
+Full Discrete Data: Numerical features are discretized into categorical intervals using KBinsDiscretizer, while categorical features are encoded using Ordinal Encoding. This representation is suitable for Categorical Naive Bayes.
+
+Mixed Continuous and Discrete Data: Numerical features retain their continuous values and are standardized using StandardScaler, while categorical features are transformed using One-Hot Encoding. This representation is suitable for Logistic Regression, SVM, and Gaussian Naive Bayes.
+
+All preprocessing transformations are organized using scikit-learn's Pipeline and ColumnTransformer to ensure consistency and reproducibility. The transformations will be fitted exclusively on training data during model evaluation to prevent data leakage.
+
+These representations allow comparisons of classification performance across different algorithms while evaluating the impact of feature encoding and discretization on predictive performance.
