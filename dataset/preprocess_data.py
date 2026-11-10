@@ -106,8 +106,7 @@ def explore_data(data):
     for col in categorical_cols:
         print(f'\n{col}:')
         print(data[col].value_counts(dropna=False))
-
-    print()
+    return data
 
     """# Overall:
     Dataset has about 12000 **valid** rows, with 17 features and 1 target.
