@@ -164,7 +164,7 @@ categorical_encoder = Pipeline([
 preprocessor_discrete = ColumnTransformer(
     transformers=[
         ('numeric', KBinsDiscretizer(
-            n_bins=5,
+            n_bins=4,
             encode='ordinal',
             strategy='uniform'
         ), numeric_cols),
