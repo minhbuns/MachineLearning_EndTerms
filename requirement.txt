@@ -12,3 +12,9 @@ Version: 3.11.2
 -----
 Name: seaborn
 Version: 0.13.2
+-----
+Name: yellowbrick
+Version: 1.5
+-----
+Name: scipy
+Version: 1.16.3
